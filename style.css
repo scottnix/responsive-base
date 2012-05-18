@@ -185,6 +185,7 @@ blockquote.right { text-align:left; }
 .aside ul ul { margin:0 0 22px 20px; }
 .aside ul ul li { padding:1px 0; }
 .aside ul ul ul { margin-bottom:0; }
+.aside img { max-width:100%; }
 .aside form, .aside table { margin-bottom:22px; }
 .aside table { border:none; }
 .aside thead { border:1px solid #ccc; }
