@@ -82,6 +82,7 @@ function childtheme_override_head_scripts() {
 
 
 // script manager template for registering and enqueuing files
+// http://wpcandy.com/teaches/how-to-load-scripts-in-wordpress-themes
 function childtheme_script_manager() {
     // wp_register_script template ( $handle, $src, $deps, $ver, $in_footer );
     // registers modernizr script, stylesheet local path, no dependency, no version, loads in header
