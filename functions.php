@@ -81,17 +81,30 @@ function childtheme_override_head_scripts() {
 
 
 
-// script manager template for registering or deregistering files
+// script manager template for registering and enqueuing files
 function childtheme_script_manager() {
-    // wp_enqueue_script template ( $handle, $src, $deps, $ver, $in_footer );
-    // loads modernizr script, local path, no dependency, no version, loads in header
-    wp_enqueue_script('modernizr-js', get_bloginfo('stylesheet_directory') . '/js/modernizr.js', false);
-    // loads dropdowns script, local path, yes dependency is jquery, no version, loads in footer
-    // wp_enqueue_script('dropdowns-js', get_bloginfo('stylesheet_directory') . '/js/superfish-dropdowns.js', array('jquery'), false, true);
-    // loads fitvids script, local path, yes dependency is jquery, no version, loads in header
-    wp_enqueue_script('fitvids-js', get_bloginfo('stylesheet_directory') . '/js/jquery.fitvids.js', array('jquery'), false, true);
-    // loads custom jQuery script, local path, yes dependency is jquery, no version, loads in footer
-    wp_enqueue_script('custom-js', get_bloginfo('stylesheet_directory') . '/js/custom.js', array('jquery'), false, true);
+    // wp_register_script template ( $handle, $src, $deps, $ver, $in_footer );
+    // registers modernizr script, stylesheet local path, no dependency, no version, loads in header
+    wp_register_script('modernizr-js', get_stylesheet_directory_uri() . '/js/modernizr.js', false, false, false);
+    // registers dropdowns script, local stylesheet path, yes dependency is jquery, no version, loads in footer
+    // wp_register_script('dropdowns-js', get_bloginfo('stylesheet_directory') . '/js/superfish-dropdowns.js', array('jquery'), false, true);
+    // registers fitvids script, local stylesheet path, yes dependency is jquery, no version, loads in footer
+    wp_register_script('fitvids-js', get_stylesheet_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), false, true);
+    // registers misc custom script, local stylesheet path, yes dependency is jquery, no version, loads in footer
+    wp_register_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', array('jquery'), false, true);
+    // registers flexslider script, local stylesheet path, yes dependency is jquery, no version, loads in footer
+
+    // enqueue the scripts for use in theme
+    wp_enqueue_script ('modernizr-js');
+    wp_enqueue_script ('fitvids-js');
+
+        // placeholder for example of conditional script loading
+        if (is_front_page() ) {
+
+        }
+
+    //always enqueue this last, helps with conflicts
+    wp_enqueue_script ('custom-js');
 
 }
 add_action('wp_enqueue_scripts', 'childtheme_script_manager');
