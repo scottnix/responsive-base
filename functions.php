@@ -35,10 +35,10 @@ function childtheme_create_contenttype() {
 add_filter('thematic_create_contenttype', 'childtheme_create_contenttype');
 
 
-
 // remove the index and follow tags from header since it is browser default.
 // http://scottnix.com/polishing-thematics-head/
 function childtheme_create_robots($content) {
+    global $paged;
     if (thematic_seo()) {
         if((is_home() && ($paged < 2 )) || is_front_page() || is_single() || is_page() || is_attachment()) {
             $content = "";
@@ -55,6 +55,7 @@ function childtheme_create_robots($content) {
     }
 }
 add_filter('thematic_create_robots', 'childtheme_create_robots');
+
 
 
 
