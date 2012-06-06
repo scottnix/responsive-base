@@ -94,7 +94,6 @@ function childtheme_script_manager() {
     wp_register_script('fitvids-js', get_stylesheet_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), false, true);
     // registers misc custom script, local stylesheet path, yes dependency is jquery, no version, loads in footer
     wp_register_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', array('jquery'), false, true);
-    // registers flexslider script, local stylesheet path, yes dependency is jquery, no version, loads in footer
 
     // enqueue the scripts for use in theme
     wp_enqueue_script ('modernizr-js');
