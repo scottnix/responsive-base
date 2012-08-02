@@ -336,10 +336,9 @@ img.aligncenter {
         padding: 0;
         overflow: hidden;
         list-style: none;
-        img,
-        img.thumbnail {
+        img {
             height: auto;
-            max-width: 89%;
+            max-width: 90%;
             margin: 0 auto;
             padding: 1%;
             border: none !important;
@@ -556,6 +555,7 @@ img.aligncenter {
    ========================================================================== */
 
 /* wp stats smiley */
+
 img#wpstats {
     width: 0;
     height: 0;
@@ -640,7 +640,8 @@ img#wpstats {
 }
 
 /*
-    html5boilerplate non-semantic helper classes
+    html5 boilerplate non-semantic helper classes
+    html5boilerplate.com/docs/The-style/#non-semantic-helper-classes
 -------------------------------------------------------------- */
 
 .ir { border:0; font:0/0 a; text-shadow:none; color:transparent; background-color:transparent; }
@@ -653,7 +654,8 @@ img#wpstats {
 .cf { *zoom:1; }
 
 /*
-    html5boilerplate print styles
+    html5 boilerplate print styles
+    http://html5boilerplate.com/docs/The-style/#print-styles
 -------------------------------------------------------------- */
 
 @media print {
