@@ -16,7 +16,7 @@ function childtheme_create_doctype() {
     $content .= "<html class=\"no-js\"";
     return $content;
 }
-add_filter('thematic_create_doctype', 'childtheme_create_doctype');
+add_filter('thematic_create_doctype', 'childtheme_create_doctype', 11);
 
 // creates the head, meta charset, and viewport tags
 function childtheme_head_profile() {
@@ -26,13 +26,13 @@ function childtheme_head_profile() {
     $content .= "<meta name=\"viewport\" content=\"width=device-width\" />" . "\n";
     return $content;
 }
-add_filter('thematic_head_profile', 'childtheme_head_profile');
+add_filter('thematic_head_profile', 'childtheme_head_profile', 11);
 
 // remove meta charset tag, now in the above function
 function childtheme_create_contenttype() {
     // silence
 }
-add_filter('thematic_create_contenttype', 'childtheme_create_contenttype');
+add_filter('thematic_create_contenttype', 'childtheme_create_contenttype', 11);
 
 
 
@@ -162,16 +162,16 @@ add_filter('thematic_widgetized_areas', 'childtheme_add_subsidiary', 50);
 // set structure for the 4th subsidiary aside
 function childtheme_4th_subsidiary_aside() {
     if (is_active_sidebar('4th-subsidiary-aside')) {
-        echo "\n".'<div id="fourth" class="aside footer-aside">' . "\n" . "\t" . '<ul class="xoxo">' . "\n";
+        echo "\n".'<aside id="fourth" class="aside footer-aside">' . "\n" . "\t" . '<div class="inner">' . "\n";
         dynamic_sidebar('4th-subsidiary-aside');
-        echo "\n" . "\t" . '</ul>' ."\n" . '</div><!-- #fourth .footer-aside -->' ."\n";
+        echo "\n" . "\t" . '</div>' ."\n" . '</aside><!-- #fourth .footer-aside -->' ."\n";
     }
 }
 
 
 
 /*
-// hide unused widget areas inside the WordPress admin
+// example for hiding unused widget areas inside the WordPress admin
 function childtheme_hide_areas($content) {
     unset($content['Index Top']);
     unset($content['Index Insert']);
