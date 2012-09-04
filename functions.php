@@ -162,9 +162,9 @@ add_filter('thematic_widgetized_areas', 'childtheme_add_subsidiary', 50);
 // set structure for the 4th subsidiary aside
 function childtheme_4th_subsidiary_aside() {
     if (is_active_sidebar('4th-subsidiary-aside')) {
-        echo "\n".'<aside id="fourth" class="aside footer-aside">' . "\n" . "\t" . '<div class="inner">' . "\n";
+        echo "\n".'<aside id="fourth" class="aside footer-aside">' . "\n" . "\t" . '<ul class="inner">' . "\n";
         dynamic_sidebar('4th-subsidiary-aside');
-        echo "\n" . "\t" . '</div>' ."\n" . '</aside><!-- #fourth .footer-aside -->' ."\n";
+        echo "\n" . "\t" . '</ul>' ."\n" . '</aside><!-- #fourth .footer-aside -->' ."\n";
     }
 }
 
