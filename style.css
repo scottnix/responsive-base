@@ -9,7 +9,7 @@ Version: 0.1.0
 Tags: thematic, child-theme, responsive, mobile-first
 */
 /* ==========================================================================
-   normalize.css 2012-03-11 - http://github.com/necolas/normalize.css
+   normalize.css v1.0.1 - http://necolas.github.com/normalize.css/
    ========================================================================== */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
@@ -48,7 +48,7 @@ a:focus {
   outline: thin dotted;
 }
 
-a:hover, a:active {
+a:active, a:hover {
   outline: 0;
 }
 
@@ -60,6 +60,10 @@ b, strong {
   font-weight: bold;
 }
 
+blockquote {
+  margin: 1em 40px;
+}
+
 dfn {
   font-style: italic;
 }
@@ -69,7 +73,11 @@ mark {
   color: #000;
 }
 
-pre, code, kbd, samp {
+p, pre {
+  margin: 1em 0;
+}
+
+code, kbd, pre, samp {
   font-family: monospace,serif;
   _font-family: 'courier new',monospace;
   font-size: 1em;
@@ -91,7 +99,7 @@ q:before, q:after {
 }
 
 small {
-  font-size: 85%;
+  font-size: 80%;
 }
 
 sub, sup {
@@ -109,12 +117,15 @@ sub {
   bottom: -0.25em;
 }
 
+dl, menu, ol, ul {
+  margin: 1em 0;
+}
+
 dd {
   margin: 0 0 0 40px;
 }
 
-menu {
-  margin: 1em 0;
+menu, ol, ul {
   padding: 0 0 0 40px;
 }
 
@@ -164,9 +175,9 @@ button, input {
   line-height: normal;
 }
 
-button, input[type="button"], input[type="reset"], input[type="submit"] {
-  cursor: pointer;
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
+  cursor: pointer;
   *overflow: visible;
 }
 
@@ -188,7 +199,7 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -728,19 +739,19 @@ img.aligncenter {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
-.aside ul {
+.aside ul,
+.aside section ul {
+  list-style: none;
   margin-left: 0;
   padding: 0;
-  list-style: none;
 }
-.aside ul ul {
-  margin: 0 0 1.625em 20px;
+.aside ul ul,
+.aside section ul ul {
+  margin: 0 0 0 20px;
 }
-.aside ul ul li {
+.aside ul ul li,
+.aside section ul ul li {
   padding: 1px 0;
-}
-.aside ul ul ul {
-  margin-bottom: 0;
 }
 .aside img {
   max-width: 100%;
@@ -894,17 +905,13 @@ img#wpstats {
     text-align: left;
   }
 
+  .sf-menu li {
+    float: left;
+  }
+
   .content-column {
     width: 45%;
     margin: 0 0 1.625em;
-  }
-
-  .page-template-template-page-fullwidth-php #comments {
-    width: 65.4%;
-  }
-
-  .sf-menu li {
-    float: left;
   }
 
   .navigation {
@@ -923,21 +930,31 @@ img#wpstats {
     width: 50%;
     text-align: right;
   }
+
+  .page-template-template-page-fullwidth-php #comments {
+    width: 65.4%;
+  }
 }
 /*
-    html5 boilerplate non-semantic helper classes
-    html5boilerplate.com/docs/The-style/#non-semantic-helper-classes
+    html5 boilerplate common helper classes
+    https://github.com/h5bp/html5-boilerplate/blob/master/doc/css.md#common-helpers
 -------------------------------------------------------------- */
 .ir {
-  border: 0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
   background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
 }
 
 .hidden {
-  display: none !important;
+  display: none!important;
   visibility: hidden;
 }
 
@@ -966,7 +983,7 @@ img#wpstats {
 }
 
 .cf:before, .cf:after {
-  content: "";
+  content: " ";
   display: table;
 }
 
@@ -980,14 +997,14 @@ img#wpstats {
 
 /*
     html5 boilerplate print styles
-    http://html5boilerplate.com/docs/The-style/#print-styles
+    https://github.com/h5bp/html5-boilerplate/blob/master/doc/css.md#print-styles
 -------------------------------------------------------------- */
 @media print {
   * {
-    background: transparent !important;
-    color: black !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
+    background: transparent!important;
+    color: #000!important;
+    box-shadow: none!important;
+    text-shadow: none!important;
   }
 
   a, a:visited {
@@ -1020,11 +1037,11 @@ img#wpstats {
   }
 
   img {
-    max-width: 100% !important;
+    max-width: 100%!important;
   }
 
   @page {
-    margin: 0.5cm;
+    margin: .5cm;
 }
 
   p, h2, h3 {
