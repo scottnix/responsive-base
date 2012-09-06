@@ -138,7 +138,7 @@ function childtheme_override_nav_above() {
 
 
 
-// add 4th subsidiary aside, currently set up to be a footer widget underneath the 3 subs
+// add 4th subsidiary aside, currently set up to be a footer widget (#footer-widget) underneath the 3 subs
 function childtheme_add_subsidiary($content) {
     $content['Footer Widget Aside'] = array(
             'admin_menu_order' => 550,
@@ -157,14 +157,14 @@ function childtheme_add_subsidiary($content) {
         );
     return $content;
 }
-add_filter('thematic_widgetized_areas', 'childtheme_add_subsidiary', 50);
+add_filter('thematic_widgetized_areas', 'childtheme_add_subsidiary');
 
 // set structure for the 4th subsidiary aside
 function childtheme_4th_subsidiary_aside() {
-    if (is_active_sidebar('4th-subsidiary-aside')) {
-        echo "\n".'<aside id="fourth" class="aside footer-aside">' . "\n" . "\t" . '<ul class="inner">' . "\n";
+    if ( is_active_sidebar('4th-subsidiary-aside') ) {
+        echo thematic_before_widget_area('footer-widget');
         dynamic_sidebar('4th-subsidiary-aside');
-        echo "\n" . "\t" . '</ul>' ."\n" . '</aside><!-- #fourth .footer-aside -->' ."\n";
+        echo thematic_after_widget_area('footer-widget');
     }
 }
 
