@@ -5,6 +5,8 @@ Responsive Base is a child theme built on the mobile-first approach to responsiv
 
 It is intended to work best with the latest version of Thematic 1.0+, but works on 9.7.7 and above.
 
+Feel free to make suggestions or improvements in the "issues" feature in Github.
+
 Demo
 -------------
 
