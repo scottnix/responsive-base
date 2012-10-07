@@ -719,6 +719,7 @@ img.aligncenter {
 .comment-navigation {
   margin: 0 0 1.625em;
   padding: 1.625em 0 0;
+  clear: both;
   font-weight: bold;
   word-spacing: 0.5em;
 }

@@ -415,6 +415,7 @@ img.aligncenter {
 .comment-navigation {
     margin: 0 0 1.625em;
     padding: 1.625em 0 0;
+    clear: both;
     font-weight: bold;
     word-spacing: 0.5em;
     a {
@@ -592,7 +593,7 @@ img#wpstats {
         width: 50%;
         text-align: right;
     }
-    .page-template-template-page-fullwidth-php #comments { width: 65.4%; }  
+    .page-template-template-page-fullwidth-php #comments { width: 65.4%; }
 
 }
 
