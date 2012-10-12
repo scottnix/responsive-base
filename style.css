@@ -294,6 +294,7 @@ pre,
 hr,
 table,
 form,
+select,
 address,
 embed {
   margin: 0 0 1.625em;
@@ -574,19 +575,21 @@ img.aligncenter {
   clear: both;
   overflow: hidden;
 }
-.gallery .gallery-row {
+
+.gallery-row {
   display: block;
   margin: 0;
   clear: both;
   overflow: hidden;
 }
-.gallery .gallery-item {
+
+.gallery-item {
   margin: 0;
   padding: 0;
   overflow: hidden;
   list-style: none;
 }
-.gallery .gallery-item img {
+.gallery-item img {
   height: auto;
   max-width: 90%;
   margin: 0 auto;
@@ -856,9 +859,69 @@ img#wpstats {
   overflow: hidden;
 }
 
+/*
+    html5 boilerplate common helper classes
+    https://github.com/h5bp/html5-boilerplate/blob/master/doc/css.md#common-helpers
+-------------------------------------------------------------- */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+.hidden {
+  display: none!important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.cf:before, .cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
 /* media queries
    ========================================================================== */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 45em) {
   #branding,
   #access .menu,
   #main,
@@ -936,66 +999,6 @@ img#wpstats {
     width: 65.4%;
   }
 }
-/*
-    html5 boilerplate common helper classes
-    https://github.com/h5bp/html5-boilerplate/blob/master/doc/css.md#common-helpers
--------------------------------------------------------------- */
-.ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-  *text-indent: -9999px;
-}
-
-.ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 100%;
-}
-
-.hidden {
-  display: none!important;
-  visibility: hidden;
-}
-
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.cf:before, .cf:after {
-  content: " ";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
-
-.cf {
-  *zoom: 1;
-}
-
 /*
     html5 boilerplate print styles
     https://github.com/h5bp/html5-boilerplate/blob/master/doc/css.md#print-styles
