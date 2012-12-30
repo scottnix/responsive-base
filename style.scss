@@ -13,13 +13,15 @@ Tags: thematic, child-theme, responsive, mobile-first
 // @import "compass";
 
 /* ==========================================================================
-   normalize.css v1.0.1 - http://necolas.github.com/normalize.css/
+   normalize.css v1.0.1 - necolas.github.com/normalize.css/
    ========================================================================== */
+
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}code,kbd,pre,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
 
 /* ==========================================================================
-   base styles
+   basic styles
    ========================================================================== */
+
 body,
 input,
 textarea {
@@ -29,59 +31,57 @@ textarea {
     color: #010101;
 }
 body { background: #eeeeee; }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: Georgia, Times, "Times New Roman", serif;
-}
 h1 {
     margin: 0.67em 0;
+    font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 2em;
 }
 h2 {
     margin: .83em 0;
+    font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 1.5em;
 }
 h3 {
     margin: 1em 0;
+    font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 1.17em;
 }
 h4 {
     margin: 1.33em 0;
+    font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 1em;
 }
 h5 {
     margin: 1.67em 0;
+    font-family: Georgia, Times, "Times New Roman", serif;
     font-size: .83em;
 }
 h6 {
     margin: 2.33em 0;
+    font-family: Georgia, Times, "Times New Roman", serif;
     font-size: .75em;
 }
 a {
     color: #004B91;
     text-decoration: none;
+    &:visited { color: #743399; }
+    &:hover { color: #FF4B33; }
 }
-a:visited { color: #743399; }
-a:hover { color: #FF4B33; }
 p,
-ul,
-ol,
-dd,
 pre,
-hr,
-table,
 form,
 select,
 address,
 embed {
     margin: 0 0 1.625em;
 }
-ul { list-style: disc; }
-ol { list-style-type: decimal;
+ul {
+    margin: 0 0 1.625em;
+    list-style: disc;
+}
+ol {
+    margin: 0 0 1.625em;
+    list-style-type: decimal;
     ol { list-style: upper-alpha;
         ol { list-style: lower-roman;
             ol { list-style: lower-alpha; }
@@ -96,6 +96,7 @@ ol ul {
 }
 dl { margin: 0 1.5em; }
 dt { font-weight: bold; }
+dd { margin: 0 0 1.625em; }
 abbr,
 acronym {
     cursor: help;
@@ -107,6 +108,7 @@ ins {
 textarea { resize: vertical; }
 caption { text-align: left; }
 table {
+    margin: 0 0 1.625em;
     border: 1px solid #ccc;
     border-width: 1px 1px 0;
     text-align: left;
@@ -119,6 +121,7 @@ td {
 }
 hr {
     height: 1px;
+    margin: 0 0 1.625em;
     border: 0;
     background-color: #010101;
     color: #010101;
@@ -134,7 +137,7 @@ hr {
     text-shadow:none;
 }
 blockquote {
-    margin:0 3em;
+    margin:0 1em;
     font-style:italic;
     em,
     i,
@@ -146,9 +149,8 @@ blockquote {
 /* ==========================================================================
    content styles
    ========================================================================== */
-#header {
-    position: relative;
-}
+#wrapper {}
+#header {}
 #branding {
     width: 90%;
     margin: 0 auto;
@@ -162,8 +164,6 @@ blockquote {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
 .skip-link { display: none; }
 #access {
-    position:relative;
-    overflow:visible;
     .menu {
         width: 90%;
         margin: 0 auto;
@@ -193,10 +193,9 @@ blockquote {
     clear: both;
 }
 #container {
-    width: 100%;
     margin: 0 0 1.625em;
 }
-#content { width: 100%; }
+#content {}
 .page-title {
     span { font-style: italic; }
     .meta-nav { font-style: normal; }
@@ -214,19 +213,15 @@ blockquote {
     }
 }
 .entry-utility {
-    margin: 0 0 1.625em;
     clear: both;
 }
 .edit-link {
     display: block;
     clear: both;
 }
-.content-column {
-    float: left;
-    width: 100%;
-}
 #links-page,
 #archives-page {
+    padding: 0;
     list-style: none;
     overflow: hidden;
 }
@@ -245,10 +240,10 @@ blockquote {
 .entry-content {
     .wp-post-image {
         float: right;
-        margin: 0 0 1.625em 1.625em;
-        padding: 5px;
+        margin: 0 0 1em 1.625em;
     }
-    img { height: auto;
+    img {
+        height: auto;
         max-width: 100%;
         margin: 0 0 1.625em;
     }
@@ -271,25 +266,21 @@ img.aligncenter {
     clear: both;
 }
 .wp-caption {
-    max-width: 96%;
+    max-width: 100%;
     margin-bottom: 1.625em;
-    padding: 9px 0 0;
-    text-align: center;
+    text-align:center;
     img {
         margin: 0;
         padding: 0;
     }
-    p.wp-caption-text {
-        margin: 0;
-        padding: 1.625em 5px;
-    }
+}
+.wp-caption-text {
+    margin: 0;
+    padding: 1.625em 0;
 }
 .gallery {
-    display: block;
-    margin: 0 auto;
     padding: 0 0 1.625em;
     clear: both;
-    overflow: hidden;
 }
 .gallery-row {
     display: block;
@@ -300,25 +291,17 @@ img.aligncenter {
 .gallery-item {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     list-style: none;
+    overflow: hidden;
     img {
         height: auto;
-        max-width: 90%;
         margin: 0 auto;
-        padding: 1%;
         border: none !important;
     }
 }
-.gallery-icon {
-    margin: 0 5px;
-    padding-top: 6px;
-}
-.gallery-caption { padding: 6px 6px 0; }
-.wp-smiley {
-    max-height: 12px;
-    margin: 0 !important;
-}
+.gallery-icon { margin: 0 .25em; }
+.gallery-caption { padding: .25em .25em 0; }
+
 
 /* comments
    ========================================================================== */
@@ -349,8 +332,8 @@ img.aligncenter {
             position: absolute;
             top: 1.625em;
             left: 1.5em;
-            height: 36px;
-            width: 36px;
+            height: 2em;
+            width: 2em;
         }
         li {
         margin: 0 0 1.625em;
@@ -358,12 +341,11 @@ img.aligncenter {
         }
     }
     .thread-odd { background: #f1f1f1; }
-
     .comment-author {
-        padding: 9px 0 0 46px;
+        padding: 0 0 0 3em;
         font-weight: bold;
     }
-    .comment-meta { padding: 0 0 9px 46px; }
+    .comment-meta { padding: 0 0 1em 3em; }
     #respond {
         margin: 0 0 1.625em;
         padding: 1.625em 1.5em;
@@ -387,10 +369,8 @@ img.aligncenter {
     margin-bottom: 1.625em;
     padding: 1.625em 0 0;
 }
-#cancel-comment-reply {
-    position: absolute;
-    top: 1.625em;
-    right: 1.5em;
+#cancel-comment-reply-link {
+    float: right;
 }
 .form-section {
     input {
@@ -399,16 +379,11 @@ img.aligncenter {
     }
     textarea { width: 98%; }
 }
-.form-section input {
-    width: 98%;
-    margin: 0 0 1.625em;
-}
 #form-allowed-tags {
     p { margin: 0; }
     span { font-style: italic; }
 }
 .form-submit {
-    padding: 1.625em 0 0;
     text-align: right;
 }
 
@@ -487,8 +462,10 @@ img.aligncenter {
     clear: both;
 }
 
-/* page templates */
+/* overriding css above - specific pages, templates
+   ========================================================================== */
 
+/* page templates */
 .page-template-template-page-fullwidth-php {
     #container {
         width: 100%;
@@ -498,7 +475,6 @@ img.aligncenter {
 }
 
 /* attachments */
-
 .attachment .page-title { font-style: italic; }
 
 /* internet explorer specific
@@ -520,27 +496,27 @@ img.aligncenter {
 /* plugin specific
    ========================================================================== */
 
-/* wp stats smiley */
-
+/* wp stats & smiley */
 img#wpstats {
     width: 0;
     height: 0;
     overflow: hidden
 }
 
-/*
-    html5 boilerplate common helper classes
-    https://github.com/h5bp/html5-boilerplate/blob/master/doc/css.md#common-helpers
--------------------------------------------------------------- */
+.wp-smiley {
+    max-height: 12px;
+    margin: 0 !important;
+}
+
+/* helper classes - html5boilerplate.com/
+   ========================================================================== */
 
 .ir{background-color:transparent;border:0;overflow:hidden;*text-indent:-9999px}.ir:before{content:"";display:block;width:0;height:100%}.hidden{display:none!important;visibility:hidden}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.invisible{visibility:hidden}.cf:before,.cf:after{content:" ";display:table}.cf:after{clear:both}.cf{*zoom:1}
 
 /* media queries
    ========================================================================== */
 
-
 @media only screen and (min-width: 45em) {
-
     #branding,
     #access .menu,
     #main,
@@ -584,11 +560,11 @@ img#wpstats {
     }
     .sf-menu li { float: left; }
     .content-column {
+        float: left;
         width: 45%;
         margin: 0 0 1.625em;
     }
     .navigation {
-        width: 100%;
         margin: 0 0 1.625em;
         overflow: hidden;
     }
@@ -602,22 +578,15 @@ img#wpstats {
         text-align: right;
     }
     .page-template-template-page-fullwidth-php #comments { width: 65.4%; }
-
 }
 
 @media only screen and (min-width: 75em) {
 
-
-
 }
 
-/*
-    html5 boilerplate print styles
-    https://github.com/h5bp/html5-boilerplate/blob/master/doc/css.md#print-styles
--------------------------------------------------------------- */
+/* print styles - html5boilerplate.com/
+   ========================================================================== */
 
 @media print {
-
     *{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100%!important}@page{margin:.5cm}p,h2,h3{orphans:3;widows:3}h2,h3{page-break-after:avoid}
-
 }
