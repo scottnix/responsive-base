@@ -82,8 +82,10 @@ ul {
 ol {
     margin: 0 0 1.625em;
     list-style-type: decimal;
-    ol { list-style: upper-alpha;
-        ol { list-style: lower-roman;
+    ol {
+        list-style: upper-alpha;
+        ol {
+            list-style: lower-roman;
             ol { list-style: lower-alpha; }
         }
     }
@@ -415,7 +417,7 @@ img.aligncenter {
         list-style: none;
         margin-left: 0;
         padding: 0;
-        ul { margin: 0 0 0 20px;
+        ul { margin: 0 0 0 1em;
             li { padding: 1px 0; }
         }
     }
@@ -534,7 +536,8 @@ img#wpstats {
         width: 30.8%;
         clear: right;
     }
-    #subsidiary { padding-top: 0;
+    #subsidiary {
+        padding-top: 0;
         .aside {
             float: left;
             width: 30.8%;
