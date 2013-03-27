@@ -110,9 +110,9 @@ add_action('wp_enqueue_scripts', 'childtheme_script_manager');
 
 
 
-// add favicon to site, add 16x16 "favicon.ico" image to child themes main folder
+// add favicon to site, add 16x16 or 32x32 "favicon.ico" or .png image to child themes main folder
 function childtheme_add_favicon() { ?>
-<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
+<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 <?php }
 add_action('wp_head', 'childtheme_add_favicon');
 
