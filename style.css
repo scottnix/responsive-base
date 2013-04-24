@@ -152,9 +152,9 @@ form {
 }
 
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
   margin: 0 2px;
-  padding: .35em .625em .75em;
+  padding: 0.35em 0.625em 0.75em;
 }
 
 legend {
@@ -241,7 +241,7 @@ h1 {
 }
 
 h2 {
-  margin: .83em 0;
+  margin: 0.83em 0;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 1.5em;
 }
@@ -334,7 +334,7 @@ acronym {
 }
 
 ins {
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #333333;
   text-decoration: none;
 }
 
@@ -348,18 +348,18 @@ caption {
 
 table {
   margin: 0 0 1.625em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-width: 1px 1px 0;
   text-align: left;
 }
 
 tr {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
 }
 
 th,
 td {
-  padding: .7em 1.25em;
+  padding: 0.7em 1.25em;
   vertical-align: top;
 }
 
@@ -572,11 +572,11 @@ img.aligncenter {
 }
 
 .gallery-icon {
-  margin: 0 .25em;
+  margin: 0 0.25em;
 }
 
 .gallery-caption {
-  padding: .25em .25em 0;
+  padding: 0.25em 0.25em 0;
 }
 
 /* comments
@@ -594,13 +594,13 @@ img.aligncenter {
 
 #comments-list ol {
   margin: 0 0 1.625em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-bottom: none;
 }
 #comments-list li {
   position: relative;
   padding: 1.625em 1.5em 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
   background: #fafafa;
 }
 #comments-list li.bypostauthor {
@@ -615,26 +615,31 @@ img.aligncenter {
 }
 #comments-list li li {
   margin: 0 0 1.625em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
-#comments-list .thread-odd {
+
+.thread-odd {
   background: #f1f1f1;
 }
-#comments-list .comment-author {
+
+.comment-author {
   padding: 0 0 0 3em;
   font-weight: bold;
 }
-#comments-list .comment-meta {
+
+.comment-meta {
   padding: 0 0 1em 3em;
 }
-#comments-list #respond {
+
+#respond {
   margin: 0 0 1.625em;
   padding: 1.625em 1.5em;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
 }
-#comments-list ul #respond {
+
+ul #respond {
   margin: 0;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 
 .comment-reply-link {
@@ -691,7 +696,8 @@ img.aligncenter {
   background: rgba(0, 0, 0, 0.1);
   padding: 0.4em 0.65em;
 }
-.page-link a, .page-link span,
+.page-link a,
+.page-link span,
 .comment-navigation a,
 .comment-navigation span {
   margin-right: 0.5em;
@@ -724,15 +730,15 @@ img.aligncenter {
   border: none;
 }
 .aside thead {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 .aside tbody {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 .aside th,
 .aside td {
-  padding: .15em .6em;
-  border-right: 1px solid #ccc;
+  padding: 0.15em 0.6em;
+  border-right: 1px solid #cccccc;
 }
 .aside tfoot tr {
   border: none;
@@ -790,7 +796,8 @@ img.aligncenter {
   width: 100%;
   margin-right: 0;
 }
-.page-template-template-page-fullwidth-php #content, .page-template-template-page-fullwidth-php #comments {
+.page-template-template-page-fullwidth-php #content,
+.page-template-template-page-fullwidth-php #comments {
   width: 100%;
 }
 
@@ -991,7 +998,7 @@ img#wpstats {
   }
 
   pre, blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
