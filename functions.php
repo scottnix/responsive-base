@@ -75,10 +75,12 @@ remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
 
 
 
-// kills the 4 scripts for the drop downs, combined and reloaded by the script manager (dropdowns-js)
-function childtheme_override_head_scripts() {
-    // silence
+// remove built in drop down theme javascripts
+// thematictheme.com/forums/topic/correct-way-to-prevent-loading-thematic-scripts/
+function childtheme_remove_superfish() {
+    remove_theme_support('thematic_superfish');
 }
+add_action('wp_enqueue_scripts', 'childtheme_remove_superfish', 9);
 
 
 
