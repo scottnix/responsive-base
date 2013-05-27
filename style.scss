@@ -174,7 +174,9 @@ blockquote {
    content styles
    ========================================================================== */
 #wrapper {}
-#header {}
+#header {
+    @extend .cf;
+}
 #branding {
     width: 90%;
     margin: 0 auto;
@@ -216,6 +218,7 @@ blockquote {
     }
 }
 #main {
+    @extend .cf;
     position: relative;
     width: 90%;
     margin: 0 auto;
@@ -395,12 +398,11 @@ img.aligncenter {
 }
 #respond {
     margin: 0 0 1.625em;
-    padding: 1.625em 1.5em;
     border-bottom: 1px solid #ccc;
 }
 ul #respond {
     margin: 0;
-    border: 1px solid #ccc;
+    border: none;
 }
 .comment-reply-link {
     padding: 0 0 1.625em;
@@ -409,11 +411,6 @@ ul #respond {
 #trackbacks-list .comment-content {
     position: absolute;
     left: -9999px;
-}
-#respond {
-    position: relative;
-    margin-bottom: 1.625em;
-    padding: 1.625em 0 0;
 }
 #cancel-comment-reply-link {
     float: right;
@@ -500,7 +497,8 @@ ul #respond {
             border-color: transparent;
         }
     }
-    #searchform input {
+    #searchform input,
+    select {
         width: 100%;
         max-width: 98%;
     }
@@ -518,6 +516,7 @@ ul #respond {
     margin-bottom: 1.625em;
 }
 #footer {
+    @extend .cf;
     margin-top: 1.625em;
     clear: both;
 }

@@ -152,9 +152,9 @@ form {
 }
 
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  padding: .35em .625em .75em;
 }
 
 legend {
@@ -241,7 +241,7 @@ h1 {
 }
 
 h2 {
-  margin: 0.83em 0;
+  margin: .83em 0;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 1.5em;
 }
@@ -334,7 +334,7 @@ acronym {
 }
 
 ins {
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #333;
   text-decoration: none;
 }
 
@@ -348,18 +348,18 @@ caption {
 
 table {
   margin: 0 0 1.625em;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-width: 1px 1px 0;
   text-align: left;
 }
 
 tr {
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #ccc;
 }
 
 th,
 td {
-  padding: 0.7em 1.25em;
+  padding: .7em 1.25em;
   vertical-align: top;
 }
 
@@ -572,11 +572,11 @@ img.aligncenter {
 }
 
 .gallery-icon {
-  margin: 0 0.25em;
+  margin: 0 .25em;
 }
 
 .gallery-caption {
-  padding: 0.25em 0.25em 0;
+  padding: .25em .25em 0;
 }
 
 /* comments
@@ -594,13 +594,13 @@ img.aligncenter {
 
 #comments-list ol {
   margin: 0 0 1.625em;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-bottom: none;
 }
 #comments-list li {
   position: relative;
   padding: 1.625em 1.5em 0;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #ccc;
   background: #fafafa;
 }
 #comments-list li.bypostauthor {
@@ -615,7 +615,7 @@ img.aligncenter {
 }
 #comments-list li li {
   margin: 0 0 1.625em;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
 }
 
 .thread-odd {
@@ -633,13 +633,12 @@ img.aligncenter {
 
 #respond {
   margin: 0 0 1.625em;
-  padding: 1.625em 1.5em;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #ccc;
 }
 
 ul #respond {
   margin: 0;
-  border: 1px solid #cccccc;
+  border: none;
 }
 
 .comment-reply-link {
@@ -650,12 +649,6 @@ ul #respond {
 #trackbacks-list .comment-content {
   position: absolute;
   left: -9999px;
-}
-
-#respond {
-  position: relative;
-  margin-bottom: 1.625em;
-  padding: 1.625em 0 0;
 }
 
 #cancel-comment-reply-link {
@@ -730,15 +723,15 @@ ul #respond {
   border: none;
 }
 .aside thead {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
 }
 .aside tbody {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
 }
 .aside th,
 .aside td {
-  padding: 0.15em 0.6em;
-  border-right: 1px solid #cccccc;
+  padding: .15em .6em;
+  border-right: 1px solid #ccc;
 }
 .aside tfoot tr {
   border: none;
@@ -746,7 +739,8 @@ ul #respond {
 .aside tfoot td {
   border-color: transparent;
 }
-.aside #searchform input {
+.aside #searchform input,
+.aside select {
   width: 100%;
   max-width: 98%;
 }
@@ -850,7 +844,7 @@ img#wpstats {
 }
 
 .hidden {
-  display: none!important;
+  display: none !important;
   visibility: hidden;
 }
 
@@ -878,16 +872,16 @@ img#wpstats {
   visibility: hidden;
 }
 
-.cf:before, .cf:after {
+.cf:before, #header:before, #main:before, #footer:before, .cf:after, #header:after, #main:after, #footer:after {
   content: " ";
   display: table;
 }
 
-.cf:after {
+.cf:after, #header:after, #main:after, #footer:after {
   clear: both;
 }
 
-.cf {
+.cf, #header, #main, #footer {
   *zoom: 1;
 }
 
@@ -975,10 +969,10 @@ img#wpstats {
    ========================================================================== */
 @media print {
   * {
-    background: transparent!important;
-    color: #000!important;
-    box-shadow: none!important;
-    text-shadow: none!important;
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
 
   a, a:visited {
@@ -998,7 +992,7 @@ img#wpstats {
   }
 
   pre, blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
@@ -1011,7 +1005,7 @@ img#wpstats {
   }
 
   img {
-    max-width: 100%!important;
+    max-width: 100% !important;
   }
 
   @page {
