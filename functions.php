@@ -36,29 +36,6 @@ add_filter('thematic_create_contenttype', 'childtheme_create_contenttype', 11);
 
 
 
-// remove the index and follow tags from header since it is browser default.
-// http://scottnix.com/polishing-thematics-head/
-function childtheme_create_robots($content) {
-    global $paged;
-    if (thematic_seo()) {
-        if((is_home() && ($paged < 2 )) || is_front_page() || is_single() || is_page() || is_attachment()) {
-            $content = "";
-        } elseif (is_search()) {
-            $content = "\t";
-            $content .= "<meta name=\"robots\" content=\"noindex,nofollow\" />";
-            $content .= "\n\n";
-        } else {
-            $content = "\t";
-            $content .= "<meta name=\"robots\" content=\"noindex,follow\" />";
-            $content .= "\n\n";
-        }
-    return $content;
-    }
-}
-add_filter('thematic_create_robots', 'childtheme_create_robots');
-
-
-
 // clear useless garbage for a polished head
 // remove really simple discovery
 remove_action('wp_head', 'rsd_link');
@@ -170,6 +147,13 @@ function childtheme_4th_subsidiary_aside() {
 
 
 
+// just because, wrap the site info in a p tag automatically
+function childtheme_override_siteinfo() {
+    echo "\t\t<p>" . do_shortcode( thematic_get_theme_opt( 'footer_txt' ) ) . "</p>\n";
+}
+
+
+
 /*
 // example for hiding unused widget areas inside the WordPress admin
 function childtheme_hide_areas($content) {
@@ -185,14 +169,6 @@ function childtheme_hide_areas($content) {
 }
 add_filter('thematic_widgetized_areas', 'childtheme_hide_areas');
 */
-
-
-
-// change the default search box text
-function childtheme_search_field_value() {
-    return "Search";
-}
-add_filter('search_field_value', 'childtheme_search_field_value');
 
 
 
