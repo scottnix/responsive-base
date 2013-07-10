@@ -115,6 +115,15 @@ function childtheme_override_nav_above() {
 
 
 
+// featured image thumbnail sizing, default is 100x100 set by Thematic
+function childtheme_post_thumb_size($size) {
+    $size = array(300,300);
+    return $size;
+}
+add_filter('thematic_post_thumb_size', 'childtheme_post_thumb_size');
+
+
+
 // add 4th subsidiary aside, currently set up to be a footer widget (#footer-widget) underneath the 3 subs
 function childtheme_add_subsidiary($content) {
     $content['Footer Widget Aside'] = array(
