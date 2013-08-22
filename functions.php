@@ -108,6 +108,15 @@ add_action('thematic_child_init', 'childtheme_register_menus');
 
 
 
+// remove user agent sniffing from thematic theme
+// this is what applies classes to the browser type and version body classes
+function childtheme_show_bc_browser() {
+    return FALSE;
+}
+add_filter('thematic_show_bc_browser', 'childtheme_show_bc_browser');
+
+
+
 // completely remove nav above functionality
 function childtheme_override_nav_above() {
     // silence
