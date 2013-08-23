@@ -3,7 +3,7 @@
 # path to file structures
 css_dir = ""
 sass_dir = ""
-images_dir = "imgages"
+images_dir = "images"
 javascripts_dir = "js"
 
 # output_style options - :nested, :expanded, :compact, :compressed
