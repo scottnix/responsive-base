@@ -164,14 +164,6 @@ function childtheme_4th_subsidiary_aside() {
 }
 
 
-
-// just because, wrap the site info in a p tag automatically
-function childtheme_override_siteinfo() {
-    echo "\t\t<p>" . do_shortcode( thematic_get_theme_opt( 'footer_txt' ) ) . "</p>\n";
-}
-
-
-
 /*
 // example for hiding unused widget areas inside the WordPress admin
 function childtheme_hide_areas($content) {
@@ -186,15 +178,4 @@ function childtheme_hide_areas($content) {
     return $content;
 }
 add_filter('thematic_widgetized_areas', 'childtheme_hide_areas');
-*/
-
-
-
-/*
-// load google analytics
-// optimized version http://mathiasbynens.be/notes/async-analytics-snippet
-function snix_google_analytics(){ ?>
-<script>var _gaq=[['_setAccount','UA-xxxxxxx-x'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
-<?php }
-add_action('wp_footer', 'snix_google_analytics');
 */
