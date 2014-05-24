@@ -84,6 +84,19 @@ function childtheme_script_manager() {
 }
 add_action('wp_enqueue_scripts', 'childtheme_script_manager');
 
+// deregister styles
+function childtheme_deregister_styles() {
+
+}
+add_action('wp_print_styles', 'childtheme_deregister_styles', 100);
+
+// deregister scripts
+function childtheme_deregister_scripts() {
+    // removes themaitc-js which has more superfish scripts
+    wp_dequeue_script('thematic-js');
+}
+add_action( 'wp_print_scripts', 'childtheme_deregister_scripts', 100 );
+
 
 
 // add favicon to site, add 16x16 or 32x32 "favicon.ico" or .png image to child themes main folder
