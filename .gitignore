@@ -1,2 +1,5 @@
 .sass-cache
 *.txt
+node_modules/
+gulpfile.js
+package.json
