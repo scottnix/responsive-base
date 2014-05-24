@@ -67,21 +67,18 @@ function childtheme_script_manager() {
     // wp_register_script template ( $handle, $src, $deps, $ver, $in_footer );
     // registers modernizr script, stylesheet local path, no dependency, no version, loads in header
     wp_register_script('modernizr-js', get_stylesheet_directory_uri() . '/js/modernizr.js', false, false, false);
-    // registers fitvids script, local stylesheet path, yes dependency is jquery, no version, loads in footer
-    wp_register_script('fitvids-js', get_stylesheet_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), false, true);
-    // registers misc custom script, local stylesheet path, yes dependency is jquery, no version, loads in footer
+    // registers misc custom scripts, local stylesheet path, yes dependency is jquery, no version, loads in footer
     wp_register_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', array('jquery'), false, true);
 
     // enqueue the scripts for use in theme
     wp_enqueue_script ('modernizr-js');
-    wp_enqueue_script ('fitvids-js');
 
         // placeholder for example of conditional script loading
         if (is_front_page() ) {
 
         }
 
-    //always enqueue this last, helps with conflicts
+    //always enqueue this last, can help with obscure conflicts
     wp_enqueue_script ('custom-js');
 
 }
@@ -105,15 +102,6 @@ function childtheme_register_menus() {
     }
 }
 add_action('thematic_child_init', 'childtheme_register_menus');
-
-
-
-// remove user agent sniffing from thematic theme
-// this is what applies classes to the browser type and version body classes
-function childtheme_show_bc_browser() {
-    return FALSE;
-}
-add_filter('thematic_show_bc_browser', 'childtheme_show_bc_browser');
 
 
 
