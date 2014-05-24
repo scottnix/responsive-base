@@ -1,4 +1,4 @@
-/*
+/*!
 Theme Name: Responsive Base for Thematic
 Theme URI: http://scottnix.com/responsive-base-a-child-theme-for-thematic/
 Description: A child theme for Thematic with stripped down styles to provide a solid responsive base for starting themes, the less is more approach.
@@ -75,6 +75,7 @@ dfn {
 
 hr {
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -177,6 +178,8 @@ html input[disabled] {
 
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -411,6 +414,10 @@ blockquote cite {
 #access .menu {
   width: 90%;
   margin: 0 auto;
+}
+
+.menu-toggle {
+  display: none;
 }
 
 .sf-menu {
@@ -851,7 +858,7 @@ img.focusable#wpstats:focus {
 
 /* media queries
    ========================================================================== */
-@media only screen and (min-width: 45em) {
+@media (min-width: 45em) {
   #branding,
   #access .menu,
   #main,
@@ -935,6 +942,7 @@ img.focusable#wpstats:focus {
   * {
     background: transparent !important;
     color: #000 !important;
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -979,8 +987,7 @@ img.focusable#wpstats:focus {
 
   @page {
     margin: 0.5cm;
-}
-
+  }
   p,
   h2,
   h3 {
