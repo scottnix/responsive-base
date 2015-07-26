@@ -4,6 +4,17 @@
 //  Responsive Base Child Theme Functions
 //
 
+/**
+ * Force Thematic HTML5
+ *
+ * New Thematic feature that allows the child theme control of the HTML mode. This was previously
+ * controlled from inside the WordPress Admin.
+ *
+ * https://github.com/ThematicTheme/Thematic/pull/113
+ *
+ */
+
+add_theme_support( 'thematic_xhtml' );
 
 // recreates the doctype section, html5boilerplate.com style with conditional classes
 // http://scottnix.com/html5-header-with-thematic/
